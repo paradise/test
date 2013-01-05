@@ -1,0 +1,305 @@
+﻿html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+{
+    display: block;
+}
+body
+{
+    line-height: 1;
+}
+ol, ul
+{
+    list-style: none;
+}
+blockquote, q
+{
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after
+{
+    content: '';
+    content: none;
+}
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html, body
+{
+    /* background-color: RGB(191,201,217);*/
+    font-family: Georgia, Serif, Helvetica;
+    font-size:14px;
+    min-height:100%;
+    height:100%;
+}
+#wrapper
+{
+    width: 1100px;
+    margin: auto;
+    background-color: #efefef;
+    min-height:100%;
+}
+#header
+{
+    height: 80px; /*border: 1px solid blue;*/
+    margin-bottom: 15px;
+    position: relative;
+}
+#title
+{
+    color: rgb(77,97,130);
+    font-size: 45px;
+    padding: 10px;
+}
+#task-block
+{
+    width: 700px;
+    background-color: RGB(150,194,82);
+    height: 100px;
+    display: none;
+}
+#code-block
+{
+    margin-top: 15px;
+    width: 700px;
+    height: 250px;
+    background-color: white; /*RGB(60,68,71);*/
+}
+#editor
+{
+    position: relative;
+    width: 700px;
+    height: 216px;
+}
+.tab-wrapper
+{
+    background-image: URL("images/strip.png");
+    height: 30px;
+    position: relative;
+    padding: 0px 5px;
+}
+.tab-wrapper .tab-item
+{
+    background-color: RGB(255,232,166);
+    padding: 3px 5px;
+    position: absolute;
+    bottom: 0px;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-topright: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    cursor: pointer;
+}
+.tab-strip
+{
+    background-color: RGB(255,232,166);
+    height: 4px;
+}
+.clear
+{
+    clear: both;
+}
+
+#console-wrapper
+{
+    border-radius: 5px;
+    background-color: RGB(111,119,126);
+    height: 250px;
+    width: 686px;
+    margin-top: 15px;
+    padding: 0px 7px 7px 7px;
+    overflow: hidden;
+}
+#console-caption
+{
+    height: 25px;
+    line-height: 25px;
+}
+#console-layout
+{
+    background-color: Black;
+    width: 100%;
+    height: 88%;
+    overflow-y:auto;
+    text-overflow:ellipsis;
+}
+
+#console-text 
+{
+    width:100%;
+}
+#console-text p 
+{
+    line-height:18px;
+    font-size:13px;
+    color:white;
+    max-width:300px;
+}
+
+#console-layout::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/*#console-layout::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    
+}*/
+ 
+#console-layout::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    background-color:#efefef;
+}
+
+#login
+{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 85px;
+    height: 20px;
+    text-align: right;
+    cursor: pointer;
+}
+
+#main-login-image
+{
+    width: 16px;
+    position: absolute;
+    top: 1px;
+    left: 0;
+}
+#login a
+{
+    text-decoration: none;
+    color: #2281CF;
+}
+#login a:hover
+{
+    text-decoration:underline;
+}
+#login span
+{
+    color: #2281CF;
+    font-size: 12px;
+    padding-left: 3px;
+}
+#login .like-link
+{
+    font-size: 15px;
+}
+.like-link
+{
+    color: #2281CF;
+    text-decoration: none;
+}
+#login-popup
+{
+    /*height: 100px;*/
+    border-radius: 5px;
+    border: 1px solid #2281CF;
+    background-color: White;
+    position: absolute;
+    right: 0px;
+    top: 20px;
+    text-align: center;
+    padding:10px;
+    cursor: default; 
+    display:none;
+}
+input[type=text], input[type=password]
+{
+    border: 1px solid #2281CF;
+    border-radius: 3px;
+    height: 20px;
+    margin-bottom: 10px;
+    background-color: #eee;
+    padding: 3px 3px;
+    width:200px;
+}
+input[type=text]:focus, input[type=password]:focus
+{
+    background-color: White;
+    outline: none;
+}
+.btn
+{
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    cursor: default;
+    font-size: 13px; /* font-weight: bold;*/
+    text-align: center;
+    white-space: nowrap;
+    min-width: 60px;
+    outline: 0;
+    padding: 3px 8px;
+    text-decoration:none!important;
+    cursor:pointer;
+}
+.btn-blue
+{
+    background-color: #4D90FE;
+    background-image: -webkit-linear-gradient(top,#4D90FE,#4787ED);
+    background-image: -moz-linear-gradient(top,#4D90FE,#4787ED);
+    background-image: -ms-linear-gradient(top,#4D90FE,#4787ED);
+    background-image: -o-linear-gradient(top,#4D90FE,#4787ED);
+    background-image: linear-gradient(top,#4D90FE,#4787ED);
+    border: 1px solid #3079ED;
+    color: white !important;
+}
+.btn-blue:hover
+{
+    background-color: #357ae8;
+    background-image: -webkit-linear-gradient(top,#4d90fe,#357ae8);
+    background-image: -moz-linear-gradient(top,#4d90fe,#357ae8);
+    background-image: -ms-linear-gradient(top,#4d90fe,#357ae8);
+    background-image: -o-linear-gradient(top,#4d90fe,#357ae8);
+    background-image: linear-gradient(top,#4d90fe,#357ae8);
+    border: 1px solid #2f5bb7;
+}
+fieldset
+{
+    padding:20px;
+    border:1px solid #ccc;
+    background-color:White;
+    margin:auto;
+}
+.editor-label
+{
+    text-align:right;
+    width:150px;
+    float:left;
+    margin-top:6px;
+    padding-right:10px;
+}
+.form-action
+{
+    margin-left:160px;
+}
+#social-block
+{
+    text-align:center;
+    margin:15px 0px;
+}
+#social-block img
+{
+    margin:0px 5px;
+    cursor:pointer;
+}
+#social-block img:hover
+{
+    box-shadow:0px 0px 10px 1px #2f5bb7;
+}

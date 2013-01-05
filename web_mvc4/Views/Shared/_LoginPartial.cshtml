@@ -1,0 +1,28 @@
+﻿@if (Request.IsAuthenticated)
+{
+    <text>Welcome <strong>@User.Identity.Name</strong>! [ @Html.ActionLink("Log Off", "LogOff", "Account")
+    ]</text>
+}
+else
+{
+    <div id="login">
+        <span onclick="TC.showLogin()">
+            <img id="main-login-image" src="@Url.Content("~/Content/images/login.png")" /><span
+                class="like-link">Sign in</span><span>▼</span></span>
+        <div id="login-popup">
+            <input type="text" name="email" placeholder="Email" />
+            <input type="password" name="password" placeholder="Password" />
+            <a href="/Account/Logon" class="btn btn-blue btn-log">Sign in</a><br />
+            <br />
+            <span style="padding: 3px 20px; color: Black; font-size: 16px">or</span>
+            <div id="social-block">
+                <img data-social="facebook" src="@Url.Content("~/Content/images/fb-icon.png")" />
+                <img data-social="twitter" src="@Url.Content("~/Content/images/twitter-icon.png")" />
+                <img data-social="google" src="@Url.Content("~/Content/images/google-icon.png")" />
+            </div>
+            <span style="padding: 3px 20px; color: Black; font-size: 16px">or</span><br />
+            <br />
+            <a id="account-create-link" href="/Account/Register">Create account</a>
+        </div>
+    </div>
+}

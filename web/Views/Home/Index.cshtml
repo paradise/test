@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Main";
+}
+<div id="task-block">
+</div>
+<div id="code-block">
+    <div class="tab-wrapper">
+        <div class="tab-item">
+            Program.cs
+        </div>
+    </div>
+    <div class="tab-strip">
+    </div>
+    <div id="editor">
+    </div>
+</div>
+<div class="clear">
+</div>
+<button onclick="compile()">Compile</button>
+<div id="console-wrapper">
+    <div id="console-caption">
+        <img src="@Url.Content("~/Content/images/console-icon.png")" />
+        My first program on C#
+    </div>
+    <div id="console-layout">
+        <div id="console-text"></div>
+    </div>
+</div>
+<script>
+    var editor = ace.edit("editor");
+    localStorage && localStorage.setItem("mode", "csharp");
+    var CSharpMode = require("ace/mode/csharp").Mode;
+    editor.getSession().setMode(new CSharpMode());
+    function compile() {
+        var codeLines = editor.getValue().split('\n');
+        var code = codeLines.join(' ');
+        $.ajax({
+            type: 'POST',
+            url: 'Home/Compile',
+            data: JSON.stringify({ code: code }),
+            contentType: 'application/json',
+            success: function (data) {
+                cons.write(data);
+            }
+        });
+    };
+</script>

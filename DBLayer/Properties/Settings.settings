@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DBLayer.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MongoServer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">alex.mongohq.com</Value>
+    </Setting>
+    <Setting Name="MongoPort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">10082</Value>
+    </Setting>
+    <Setting Name="MongoUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">paradise</Value>
+    </Setting>
+    <Setting Name="MongoPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">diablo3</Value>
+    </Setting>
+    <Setting Name="MongoDb" Type="System.String" Scope="User">
+      <Value Profile="(Default)">trycode</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/app")
+</head>
+<body>
+    <div id="fb-root"></div>
+    <div class="custom-wrapper">
+        <header>
+            <div class="content-wrapper" style="position: relative; padding-top:35px">
+                <div class="float-left">
+                    <p class="site-title">@Html.ActionLink("TryCode", "Index", "Home")</p>
+                </div>
+                <div class="float-right">
+                    <nav>
+                        <ul id="menu">
+                            <li>@Html.ActionLink("Lessons", "Index", "Lessons")</li>
+                            <li>@Html.ActionLink("Contacts", "Contact", "Home")</li>
+                        </ul>
+                    </nav>
+                </div>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </header>
+        <div class="clear"></div>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        <div id="spacer"></div>
+    </div>
+    <footer>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p>&copy; @DateTime.Now.Year - TryCode</p>
+            </div>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
